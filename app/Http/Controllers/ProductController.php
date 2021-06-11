@@ -14,13 +14,11 @@ class ProductController extends Controller
     public function index()
     {
         $product = Product::all();
-        if(count($product) < 1)
-        {
+        if (count($product) < 1) {
             return [
-            "message" => "No products exist, add products first"
-        ];
-        }
-        else {
+                "message" => "No products exist, add products first"
+            ];
+        } else {
             return $product;
         }
     }
@@ -32,10 +30,10 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-        'name'  => 'required',
-        'slug'  =>  'required',
-        'description'   => 'required',
-            'price'     => 'required'
+            'name' => 'required',
+            'slug' => 'required',
+            'description' => 'required',
+            'price' => 'required'
         ]);
         try {
             return Product::create($request->all());
@@ -49,7 +47,8 @@ class ProductController extends Controller
     /**
      * Get Products by Id
      */
-    public function show($id) {
+    public function show($id)
+    {
         if (Product::find($id)) {
             return Product::find($id);
         } else {
@@ -62,16 +61,15 @@ class ProductController extends Controller
     /**
      * Update Product by Id
      */
-    public function update(Request $request , $id)
+    public function update(Request $request, $id)
     {
         $product = Product::find($id);
-        if($product !== null)
-        {
+        if ($product !== null) {
             $product->update($request->all());
             return $product;
         } else {
             return [
-                "message"   => "sorry product with id {$id} not found"
+                "message" => "sorry product with id {$id} not found"
             ];
         }
 
@@ -84,14 +82,12 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $product = Product::find($id);
-        if ($product !== null)
-        {
+        if ($product !== null) {
             $product->delete();
             return [
-                "message"   => "Product {$id} destroyed successfully"
+                "message" => "Product {$id} destroyed successfully"
             ];
-        }
-        else return [
+        } else return [
             "message" => "Sorry product with id '{$id}' not found"
         ];
     }
