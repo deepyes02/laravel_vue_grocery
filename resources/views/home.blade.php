@@ -3,18 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>Home</title>
-
         <!-- styling -->
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
-
     </head>
-    <body>
+    <body class="antialiased">
    <div id="app">
-       <app></app>
+<container></container>
     </div>
-
    <script src="{{ mix('/js/app.js') }}"></script>
     </body>
 </html>

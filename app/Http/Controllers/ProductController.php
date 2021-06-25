@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Product;
 use Exception;
 use Illuminate\Http\Request;
@@ -76,9 +75,8 @@ class ProductController extends Controller
     }
 
     /**
-     * Delete Product
+    * Delete product
      */
-
     public function destroy($id)
     {
         $product = Product::find($id);
@@ -91,6 +89,4 @@ class ProductController extends Controller
             "message" => "Sorry product with id '{$id}' not found"
         ];
     }
-
-
 }
