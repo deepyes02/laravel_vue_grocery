@@ -23,7 +23,7 @@
 import DefaultButton from "./DefaultButton";
 export default {
     components: {
-        DefaultButton: DefaultButton,
+        'DefaultButton': DefaultButton,
     },
     name: "ListVegetables",
 

@@ -1,8 +1,9 @@
 <template>
-    <div class="container p-4 bg-gray-200">
+    <div class="px-10 bg-gray-200">
         <Heading/>
         <Counter/>
         <ListVegetables/>
+        <PostVegetables/>
     </div>
 </template>
 <script>
@@ -11,12 +12,14 @@
 import Heading from './Heading';
 import Counter from './Counter';
 import ListVegetables from './ListVegetables';
+import PostVegetables from './PostVegetables';
 
-    export default {
-        components: {
-            'Heading' : Heading,
-            'Counter'   : Counter,
-            'ListVegetables' : ListVegetables
-        }
+export default {
+    components: {
+        'Heading': Heading,
+        'Counter': Counter,
+        'ListVegetables': ListVegetables,
+        'PostVegetables': PostVegetables
     }
+}
 </script>
