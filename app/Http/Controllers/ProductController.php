@@ -77,7 +77,7 @@ class ProductController extends Controller
     /**
     * Delete product
      */
-    public function destroy($id)
+    public function destroy($id): array
     {
         $product = Product::find($id);
         if ($product !== null) {
