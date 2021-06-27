@@ -3,7 +3,6 @@
         <h3 class="my-4 text-2xl text-gray-600">You've pressed the button {{ count <= 1 ? count + ' time' : count + ' times' }}</h3>
 		<DefaultButton buttonText="Press" v-on:click="increaseCounter"/>
 		<DefaultButton buttonText="Reset" v-on:click="resetCounter"/>
-
     </div>
 </template>
 

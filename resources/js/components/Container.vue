@@ -6,7 +6,7 @@
     </div>
 </template>
 <script>
-import axios from "axios";
+// import axios from "axios";
 // import { method } from "lodash";
 import Heading from './Heading';
 import Counter from './Counter';
